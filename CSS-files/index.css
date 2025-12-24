@@ -21,6 +21,7 @@ body {
   font-size: 20px;
   position: sticky;
   top: 0px;
+  z-index: 1;
   background-color: white;
 }
 
@@ -131,11 +132,85 @@ body {
   text-align: start;
 }
 
-.box img {
+.img {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.box1 .img::after {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/laetitia-rouget-earthenware-vase-queen-pink-3.jpg");
+}
+.box1 .img::before {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/SarahFrancesKelley-267_1.jpg?v=1764626090&width=500");
+}
+
+.box2 .img::after {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/Charingworth-fiddle-cutlery-42-set-vintage-1.jpg?v=1763381473&width=500");
+}
+.box2 .img::before {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/webSarahFrancesKelley-159.jpg?v=1763381473&width=400");
+}
+
+.box3 .img::after {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/ESPERIENZE-red-wines-1.jpg?v=1763381133&width=400 ");
+}
+
+.box3 .img::before {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/Decanter_lightened_4770bdd4-cbbf-4f6d-8dea-3d2658010e5d.png?v=1764089269&width=500");
+}
+
+.box4 .img::after {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/Set-of-4-x-7oz-Coffee-Mug_Gold_cutout.webp?v=1750776733&width=200");
+}
+
+.box4 .img::before {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/Feldspar_candlabra_8df37d82-23ce-4cc4-ab97-faeb117614cb.png?v=1764523219&width=400");
+}
+
+.box5 .img::after {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/earthenware-laetitia-rouget-magicbox-red-1-w.jpg?v=1762377353&width=360");
+}
+.box5 .img::before {
+  background-image: url("https://jackandabel.co.uk/cdn/shop/files/SarahFrancesKelley-204_1.jpg?v=1762467398&width=200");
+}
+
+.box:hover .img::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.box:hover .img::after {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* .box img {
   height: 100%;
   width: 100%;
   background-size: cover;
-}
+} */
 
 .sec-title {
   display: flex;
