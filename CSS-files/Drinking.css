@@ -22,6 +22,7 @@ body {
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 99;
 }
 
 .options {
@@ -55,6 +56,7 @@ body {
   position: sticky;
   top: 90px;
   background-color: white;
+  z-index: 99;
 }
 
 .secondry_nav ul {
@@ -129,12 +131,147 @@ body {
   margin-bottom: 50px;
 }
 
-.box img {
+.img {
+   position: relative;
   height: 88%;
   width: 100%;
-  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+.img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.65s ease, transform 0.6s ease;
+}
+
+.box:hover .img::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.box:hover .img::after {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.box1 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/theiere-tourron-ecorce-961279.jpg?v=1720532947&width=500);
+}
+
+.box1 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Pitcher_TOURRON_MATIERE_STILL_LIFE.jpg?v=1720532968&width=500);
+}
+
+.box2 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantineteapotvert-min.jpg?v=1713958506&width=500);
+}
+
+.box2 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantine-teapot-lifestyle-4-min.jpg?v=1713961970&width=500);
+}
+
+.box3 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Teapot_Small_Both_teaspoon2_1200x1500_crop_center_d0964921-e6bb-43fc-b563-eebedcdbde0f.webp?v=1750771687&width=500);
+}
+
+.box3 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Teapot_Small_Both_teaspoon2_1200x1500_crop_center_d0964921-e6bb-43fc-b563-eebedcdbde0f.webp?v=1750771687&width=500);
+}
+
+.box4 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-tea-strainer-1-min.jpg?v=1713450686&width=500);
+}
+.box4 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-tea-strainer-2-min.jpg?v=1713450686&width=500);
+}
+.box5 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-Cafetiere-500ml-1-min.jpg?v=1713439111&width=400);
+}
+.box5 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Screenshot_2024-06-17_at_17.02.54.png?v=1718640263&width=500);
+}
+.box6 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Screenshot_2024-06-17_at_17.02.54.png?v=1718640263&width=500);
+}
+.box6 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Screenshot_2025-01-23_at_17.35.59.png?v=1764624074&width=500);
+}
+
+.box7 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/jars-vase-maguelone-creamer-cachemire.jpg?v=1712762263&width=360);
+}
+.box7 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/jars-vase-maguelone-creamer-lifestyle-1.jpg?v=1720106195&width=500);
+}
+.box8 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/ZAFFERANO-Bilia-Creamer-white-BA00901.jpg?v=1713349629&width=500);
+}
+.box8 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/ZAFFERANO-Bilia-Creamer-white-BA00901.jpg?v=1713349629&width=500);
+}
+.box9 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-milk-jug-1-min.jpg?v=1713446502&width=400);
+}
+.box9 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-milk-jug-4-min.jpg?v=1718639178&width=360);
+}
+.box10 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/John-Julian-classical-stoneware-cream-jug-small-1_5247bcf1-5bef-4efe-a786-1ed4dc235c2b.jpg?v=1713609113&width=400);
+}
+.box10 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/John-Julian-classical-stoneware-cream-jug-2.jpg?v=1713609113&width=360);
+}
+
+.box11 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/SarahFrancesKelley-007_1.jpg?v=1764624109&width=500);
+}
+.box11 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Feldspar-tea-mug-1-min.jpg?v=1764624109&width=500);
+}
+.box12 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantinemugrose-w-min.jpg?v=1713958601&width=500);
+}
+.box12 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantine-mug-lifestyle-3-min.jpg?v=1713962032&width=500);
+}
+.box13 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantinetumblervert-s-min.jpg?v=1737647342&width=100);
+}
+.box13 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantinetumblers-min.jpg?v=1737647095&width=500);
+}
+.box14 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantinetumblergris-s-min.jpg?v=1713958563&width=500);
+}
+.box14 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/cantine-tumbler-lifestyle-2-min.jpg?v=1737647342&width=500);
+}
+.box15 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Screenshot2024-12-12at16.58.08.png?v=1734022729&width=500);
+}
+.box15 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Screenshot2024-12-12at16.58.08.png?v=1734022729&width=500);
+}
+.box16 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/Decanter_lightened_4770bdd4-cbbf-4f6d-8dea-3d2658010e5d.png?v=1764089269&width=500);
+}
+.box16 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/ESPERIENZE-red-wines-1.jpg?v=1763381133&width=500);
+}
 /* Footer section */
 
 .contact_section {

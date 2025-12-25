@@ -22,6 +22,7 @@ body {
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 99;
 }
 
 .options {
@@ -55,6 +56,7 @@ body {
   position: sticky;
   top: 90px;
   background-color: white;
+  z-index: 99;
 }
 
 .secondry_nav ul {
@@ -176,10 +178,96 @@ body {
   margin-bottom: 50px;
 }
 
-.box img {
+.img {
+  position: relative;
   height: 88%;
   width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.65s ease, transform 0.6s ease;
+}
+
+.box:hover .img::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.box:hover .img::after {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.box1 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/sac-doudou2.png?v=1761583900&width=360);
+}
+
+.box1 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/SAC_DOUDOU_Vert_de_Gris.jpg?v=1761583900&width=900);
+}
+
+.box2 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/IMG_5780.jpg?v=1764624604&width=900);
+}
+
+.box2 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/IMG_5780.jpg?v=1764624604&width=900);
+}
+
+.box3 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/3395a2411e6e6ebad1b2a8832fc4e246d7af4b2b80228bb515362169a6760d4b.jpg?v=1755599848&width=900);
+}
+
+.box3 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/2ae3ea413d2d8a06bfa41bf53c98bf6a2eac79d2b8e99c0ee06bd07487fb9155.jpg?v=1755599849&width=360);
+}
+.box4 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/0d744deb518ee4890b5c0ecef9e09b8b2a68bddcf36e51d559afd88d5a805df2.jpg?v=1755599862&width=900);
+}
+.box4 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/b8c377134c939b3ef6a2a373ed9b6647da5187593ba9162871408a7a84f5e86d.jpg?v=1755599864&width=360);
+}
+.box5 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/e274fa319184ff47f78922d1d415efddf2a7306e3a2feb6169d82e7cccb685df.jpg?v=1755599859&width=900);
+}
+.box5 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/5793117cc8816a0384422c723e677f5fc5a2cf12381a66b19e2a1b23ccddb8d7.jpg?v=1755599862&width=360);
+}
+.box6 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/da3980641dc7e700282e93258ed262ee64c370dfd430a3265b7c817e4f1bc6b8.jpg?v=1755599851&width=900);
+}
+.box6 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/e30b81951966a1d40f4bd2c3e3754c27cacf3267375c90925bb73477f3cc03dd.jpg?v=1755599853&width=360);
+}
+
+.box7 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/62f3381d0a37440f0556c3be84280595c1ff97ab875a81d4308db51abdab8d83.jpg?v=1755599865&width=900);
+}
+.box7 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/8ebfa5ee2db65fcfbed581fb2a036ff2a8fe8686f0d4313d6bf6452a56000568.jpg?v=1755599867&width=360);
+}
+.box8 .img::after {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/967b6802bad5922da89a770a06b7661c13283e039f69f43ba82dc159e9aef289.jpg?v=1755599868&width=900);
+}
+.box8 .img::before {
+  background-image: url(https://jackandabel.co.uk/cdn/shop/files/5300ebfc086a1e7c8d0cfe3292eb1c8c3445d26ba8bbb69a6a3760e53a53a53e.jpg?v=1755599871&width=360);
 }
 
 /* Footer section */
